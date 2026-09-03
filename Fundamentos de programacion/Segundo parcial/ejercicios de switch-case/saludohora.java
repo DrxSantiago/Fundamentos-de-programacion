@@ -1,0 +1,30 @@
+package casos_switch;
+import java.util.Scanner;
+
+public class saludohora {
+	static public void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Ingresa la hora (formato 0 a 23): ");
+        int hora = sc.nextInt();
+
+        switch (hora) {
+            case 6: case 7: case 8: case 9: case 10: case 11: case 12:
+                System.out.println("Buenos días");
+                break;
+
+            case 13: case 14: case 15: case 16: case 17: case 18: case 19: case 20:
+                System.out.println("Buenas tardes");
+                break;
+
+            case 21: case 22: case 23: case 0: case 1: case 2: case 3: case 4: case 5:
+                System.out.println("Buenas noches");
+                break;
+
+            default:
+                System.out.println("Error: La hora ingresada debe estar entre 0 y 23.");
+                break;
+        }
+        sc.close();
+	}
+
+}
